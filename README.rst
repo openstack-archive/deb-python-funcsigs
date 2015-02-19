@@ -46,13 +46,21 @@ Example
 -------
 
 To obtain a signature object, pass the target function to the
-``funcsigs.signature`` function. ::
+``funcsigs.signature`` function.
+
+.. code-block:: python
 
     >>> from funcsigs import signature
     >>> def foo(a, b=None, *args, **kwargs):
     ...     pass
-
+    ...
     >>> sig = signature(foo)
+    >>> sig
+    <funcsigs.Signature object at 0x...>
+    >>> sig.parameters
+    OrderedDict([('a', <Parameter at 0x... 'a'>), ('b', <Parameter at 0x... 'b'>), ('args', <Parameter at 0x... 'args'>), ('kwargs', <Parameter at 0x... 'kwargs'>)])
+    >>> sig.return_annotation
+    <class 'funcsigs._empty'>
 
 
 Introspecting callables with the Signature object
