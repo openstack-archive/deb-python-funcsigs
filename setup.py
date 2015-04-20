@@ -26,7 +26,7 @@ setup(
     description="Python function signatures from PEP362 for Python 2.6, 2.7 and 3.2+",
     long_description=open('README.rst').read(),
     license="ASL",
-    install_requires = [],
+    install_requires = ['ordereddict'],
     classifiers = [
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
