@@ -1,0 +1,5 @@
+python-funcsigs (0.4-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #793756)
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 27 Jul 2015 09:02:21 +0200

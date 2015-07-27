@@ -1,0 +1,9 @@
+Document: python-funcsigs-doc
+Title: funcsigs Documentation
+Author: N/A
+Abstract: Sphinx documentation for funcsigs
+Section: Programming/Python
+
+Format: HTML
+Index: /usr/share/doc/python-funcsigs-doc/html/index.html
+Files: /usr/share/doc/python-funcsigs-doc/html/*
