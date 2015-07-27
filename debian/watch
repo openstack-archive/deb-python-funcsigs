@@ -1,3 +1,3 @@
 version=3
-http://pypi.python.org/packages/source/f/funcsigs funcsigs-(.*).tar.gz
-
+opts="uversionmangle=s/\.(b|rc)/~$1/" \
+https://github.com/aliles/funcsigs/tags .*/(\d[\d\.]+)\.tar\.gz
