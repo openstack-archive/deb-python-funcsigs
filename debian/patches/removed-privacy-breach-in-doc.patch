@@ -1,0 +1,18 @@
+Description: Removed privacy breach in docs
+Author: Thomas Goirand <zigo@debian.org>
+Forwarded: not-needed
+Last-Update: 2015-07-27
+
+--- python-funcsigs-0.4.orig/docs/_templates/page.html
++++ python-funcsigs-0.4/docs/_templates/page.html
+@@ -1,9 +1,5 @@
+ {% extends "!page.html" %}
+ {% block extrahead %}
+-    <a href="https://github.com/aliles/funcsigs">
+-        <img style="position: absolute; top: 0; right: 0; border: 0;"
+-             src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"
+-             alt="Fork me on GitHub">
+-    </a>
++    <a href="https://github.com/aliles/funcsigs">Fork me on GitHub</a>
+     {{ super() }}
+ {% endblock %}
