@@ -1,3 +1,9 @@
+python-funcsigs (0.4-2) unstable; urgency=medium
+
+  * Adds no-intersphinx.patch to avoid network access at build time.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 14 Sep 2015 12:38:08 +0000
+
 python-funcsigs (0.4-1) unstable; urgency=medium
 
   * Initial release. (Closes: #793756)
