@@ -61,18 +61,29 @@ def signature(obj):
     if isinstance(obj, types.MethodType):
         sig = signature(obj.__func__)
         if obj.__self__ is None:
-            # Unbound method: the first parameter becomes positional-only
-            if sig.parameters:
-                first = sig.parameters.values()[0].replace(
-                    kind=_POSITIONAL_ONLY)
-                return sig.replace(
-                    parameters=(first,) + tuple(sig.parameters.values())[1:])
-            else:
-                return sig
+            # Unbound method - preserve as-is.
+            return sig
         else:
-            # In this case we skip the first parameter of the underlying
-            # function (usually `self` or `cls`).
-            return sig.replace(parameters=tuple(sig.parameters.values())[1:])
+            # Bound method. Eat self - if we can.
+            params = tuple(sig.parameters.values())
+
+            if not params or params[0].kind in (_VAR_KEYWORD, _KEYWORD_ONLY):
+                raise ValueError('invalid method signature')
+
+            kind = params[0].kind
+            if kind in (_POSITIONAL_OR_KEYWORD, _POSITIONAL_ONLY):
+                # Drop first parameter:
+                # '(p1, p2[, ...])' -> '(p2[, ...])'
+                params = params[1:]
+            else:
+                if kind is not _VAR_POSITIONAL:
+                    # Unless we add a new parameter type we never
+                    # get here
+                    raise ValueError('invalid argument type')
+                # It's a var-positional parameter.
+                # Do nothing. '(*args[, ...])' -> '(*args[, ...])'
+
+            return sig.replace(parameters=params)
 
     try:
         sig = obj.__signature__
