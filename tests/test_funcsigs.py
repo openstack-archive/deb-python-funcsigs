@@ -1,9 +1,4 @@
-try:
-    # python 2.x
-    import unittest2 as unittest
-except ImportError:
-    # python 3.x
-    import unittest
+import unittest2 as unittest
 
 import doctest
 import sys
@@ -69,6 +64,9 @@ class TestFunctionSignatures(unittest.TestCase):
         self.assertTrue(inspect.__version__)
 
     def test_readme(self):
+        # XXX: This fails but doesn't fail the build.
+	# (and the syntax isn't valid on all pythons so that seems a little
+	# hard to get right.
         doctest.testfile('../README.rst')
 
     def test_unbound_method(self):
