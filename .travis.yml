@@ -9,6 +9,7 @@ python:
   - pypy
   - pypy3
 install:
+  - pip install -U pip setuptools wheel
   - pip install -r requirements/development.txt .
 script:
   - coverage run setup.py test
