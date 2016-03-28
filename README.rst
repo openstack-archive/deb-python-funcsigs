@@ -67,7 +67,7 @@ Introspecting callables with the Signature object
 
 .. note::
 
-   This section of documentation is a direct repoduction of the Python
+   This section of documentation is a direct reproduction of the Python
    standard library documentation for the inspect module.
 
 The Signature object represents the call signature of a callable object and its
