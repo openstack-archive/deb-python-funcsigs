@@ -29,6 +29,7 @@ setup(
     extras_require = {
         ':python_version<"2.7"': ['ordereddict'],
     },
+    setup_requires = ["setuptools>=17.1"],
     classifiers = [
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
