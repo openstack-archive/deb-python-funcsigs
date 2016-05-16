@@ -2,8 +2,7 @@ SHELL := /bin/bash
 
 deps:
 	pip install --upgrade \
-	            -r requirements/development.txt \
-	            -r requirements/production.txt
+	            -r requirements/development.txt
 
 sdist:
 	python setup.py sdist
