@@ -1,5 +1,6 @@
-python-funcsigs (1.0.2-1) UNRELEASED; urgency=medium
+python-funcsigs (1.0.2-1) experimental; urgency=medium
 
+  * Team upload.
   * New upstream release
   * Fixed VCS URLs (https).
   * Changed upstream url to new one
@@ -11,7 +12,7 @@ python-funcsigs (1.0.2-1) UNRELEASED; urgency=medium
   * Standards-Version is 3.9.8 now (no changes)
   * Remove more privacy breach by removed-privacy-breach-in-doc.patch
 
- -- Ondřej Nový <novy@ondrej.org>  Sun, 28 Feb 2016 15:37:57 +0100
+ -- Ondřej Nový <onovy@debian.org>  Mon, 04 Jul 2016 23:32:51 +0200
 
 python-funcsigs (0.4-2) unstable; urgency=medium
 
