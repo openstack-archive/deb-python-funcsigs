@@ -9,6 +9,7 @@ python-funcsigs (1.0.2-1) UNRELEASED; urgency=medium
     - Reordered
     - Added myself to Debian part
   * Standards-Version is 3.9.8 now (no changes)
+  * Remove more privacy breach by removed-privacy-breach-in-doc.patch
 
  -- Ondřej Nový <novy@ondrej.org>  Sun, 28 Feb 2016 15:37:57 +0100
 
