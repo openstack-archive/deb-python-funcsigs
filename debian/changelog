@@ -5,7 +5,9 @@ python-funcsigs (1.0.2-1) UNRELEASED; urgency=medium
   * Changed upstream url to new one
   * Changed build depends for new release
   * Added autopkgtest-pkg-python testsuite
-  * d/copyright: Reordered
+  * d/copyright
+    - Reordered
+    - Added myself to Debian part
   * Standards-Version is 3.9.8 now (no changes)
 
  -- Ondřej Nový <novy@ondrej.org>  Sun, 28 Feb 2016 15:37:57 +0100
