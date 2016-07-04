@@ -12,7 +12,7 @@ Build-Depends: debhelper (>= 9),
                python3-setuptools (>= 17.1),
 Build-Depends-Indep: python-unittest2 (>= 1.1.0),
                      python3-unittest2 (>= 1.1.0),
-Standards-Version: 3.9.6
+Standards-Version: 3.9.8
 Vcs-Browser: https://anonscm.debian.org/cgit/openstack/python-funcsigs.git/
 Vcs-Git: https://anonscm.debian.org/git/openstack/python-funcsigs.git
 Homepage: http://funcsigs.readthedocs.org
